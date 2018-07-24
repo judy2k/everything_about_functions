@@ -1,3 +1,18 @@
+import re
+from functools import partial
+
+
+def printf(fmt, *args):
+    print(re.sub(r'%s', partial(next, iter(args)), fmt))
+
+
+printf("A greeting: %s", 'hello')
+
+printf("Two greetings: %s, %s", 'hello', 'hi')
+
+printf("Three greetings: %s, %s, %s", 'hello', 'hi', 'hey')
+
+
 def send_sms(message, *recipients):
     print(f"Send a message to: {recipients}")
 

@@ -4,3 +4,11 @@ def say_hello():
 
 # Call the function:
 say_hello()
+# Hello!
+
+
+# `say_hello` is a variable!
+hello = say_hello
+
+hello()
+# Hello!
