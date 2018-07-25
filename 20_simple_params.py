@@ -1,5 +1,5 @@
 def send_sms(recipient, message):
-    print(f"Sending a message to {recipient}: {message!r}")
+    print(f"Send a message to {recipient}: {message!r}")
 
 
 """

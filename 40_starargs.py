@@ -3,6 +3,7 @@ from functools import partial
 
 
 def printf(fmt, *args):
+    pass
     print(re.sub(r'%s', partial(next, iter(args)), fmt))
 
 

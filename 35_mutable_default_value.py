@@ -8,10 +8,13 @@ def send_many_sms(sender, message, recipients=["447700900770"]):
 
 # Call with positional arguments:
 send_many_sms("447700900730", "How's it going?")
+# -> Sending a message to 447700900770
 
 
 # Call with named argument:
 send_many_sms("447700900730", "How's it going?", recipients=["447700900770", "447700900771"])
+# -> Sending a message to 447700900770
+# -> Sending a message to 447700900771
 
 
 # Providing value for sender: -------------------------------------------------

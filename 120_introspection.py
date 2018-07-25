@@ -49,6 +49,7 @@ print(bound_args)
 
 print("validating -----------------------")
 
+
 def validated(target):
     sig = inspect.signature(target)
 
@@ -62,10 +63,21 @@ def validated(target):
         return target(*bound_args.args, **bound_args.kwargs)
     return wrapper
 
+
 @validated
 def add_numbers(x: int, y: int):
     return x + y
 
+
 print(add_numbers(1, 2))
 
-print(add_numbers(1, "two"))
+
+"""
+>>> print(add_numbers(1, "two"))
+Traceback (most recent call last):
+  File "120_introspection.py", line 71, in <module>
+    print(add_numbers(1, "two"))
+  File "120_introspection.py", line 61, in wrapper
+    raise TypeError(f"Argument {value!r} is not of type {t}")
+TypeError: Argument 'two' is not of type <class 'int'>
+"""
