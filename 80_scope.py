@@ -9,6 +9,16 @@ def using_https():
 print(using_https())
 
 
+ALLOWED_DOMAINS = [
+    ".europython.eu",
+    ".ninjarockstar.guru",
+]
+
+
+def add_allowed_domain(domain):
+    ALLOWED_DOMAINS.append(domain)
+
+
 # Setting a global variable is **not** fine -----------------------------------
 
 def set_https(value):
@@ -52,3 +62,9 @@ Traceback (most recent call last):
     print("Toggling USE_HTTPS. Value before:", USE_HTTPS)
 UnboundLocalError: local variable 'USE_HTTPS' referenced before assignment
 """
+
+def toggle_https():
+    USE_HTTPS = not USE_HTTPS
+
+
+toggle_https()

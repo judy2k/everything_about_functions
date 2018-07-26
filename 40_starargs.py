@@ -14,6 +14,9 @@ printf("Two greetings: %s, %s", 'hello', 'hi')
 printf("Three greetings: %s, %s, %s", 'hello', 'hi', 'hey')
 
 
+printf("Two greetings: %s, %s", args=('hello', 'hi'))
+
+
 def send_sms(message, *recipients):
     print(f"Send a message to: {recipients}")
 

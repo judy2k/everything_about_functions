@@ -25,16 +25,17 @@ send_sms(
 
 # Redefine with kw_only args --------------------------------------------------
 
-def send_sms(sender,
-             recipient,
-             message,
-             *,
-             message_type,
-             headers,
-             ttl=None,
-             callback=None,
-             message_class=None,
-             ):
+def send_sms(
+        *,
+        sender,
+        recipient,
+        message,
+        message_type,
+        headers,
+        ttl=None,
+        callback=None,
+        message_class=None,
+):
     pass
 
 

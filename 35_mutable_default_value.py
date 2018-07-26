@@ -102,8 +102,10 @@ print(recipients)
 
 # -----------------------------------------------------------------------------
 
+
 print()
 print("Let's fix the 'modify parameter problem:")
+
 
 def send_many_sms(sender, message, recipients=None):
     if recipients is None:

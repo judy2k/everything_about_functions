@@ -9,7 +9,7 @@ getter = get_later(
     'https://media3.giphy.com/media/l41m4emQlTwc4COxG/giphy.gif')
 
 # Time goes by ...
-...
+
 http_response = getter()
 print("Returned status code:", http_response.status_code)
 
