@@ -1,13 +1,13 @@
-import inspect
+
 
 
 def add_numbers(x, y):
     return x + y
 
-
+import inspect
 sig = inspect.signature(add_numbers)
-
 print(sig.parameters)
+# -> OrderedDict([('x', <Parameter "x">), ('y', <Parameter "y">)])
 
 args = [2, 3]
 bound_args = sig.bind(*args)
@@ -42,6 +42,7 @@ sig = inspect.signature(add_numbers)
 
 # But we can call with strings!
 print(sig.parameters)
+
 args = ["a", "b"]
 bound_args = sig.bind(*args)
 print(bound_args)

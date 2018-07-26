@@ -51,6 +51,7 @@ Client.send_sms(my_client, "sender", "recipient", "Hey, how's it going?")
 """
 
 my_client.what_class_am_i()
+# <class '__main__.Client'>
 
 """
 Calls to `super` are detected by the Python compiler and converted from:
